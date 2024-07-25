@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create Order</title>
+        <link rel="stylesheet" type="text/css" href="../static/css/restaurant.css">
+        <script src="../static/js/restaurant.js"></script>
+    </head>
+    <body>
+        <a href="/orders">BACK</a>
+        <h1>Create Order</h1>
+        <form onsubmit="createOrder(event)" id="create_order_form">
+            <p>Order ID:</p>
+            <input type="number" min="1" max="20000" name="order_id" required>
+            <p>Order Date:</p>
+            <input type="datetime" name="order_date" required><br><br>
+            <table id="product_table">
+                <tr>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="product_name" required></td>
+                    <td><input type="number" min="1" max="100" name="quantity" required></td>
+                    <td><a href="javascript:void(0)" onClick="deleteRow(this)">Delete</a></td>
+                </tr>
+            </table>
+            <a href="javascript:void(0)" onClick="addRow()">Add Row</a><br><br>
+            <input type="submit">
+        </form>
+    </body>
+</html>

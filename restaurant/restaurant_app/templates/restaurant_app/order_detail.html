@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Order Detail</title>
+        <link rel="stylesheet" type="text/css" href="../static/css/restaurant.css">
+        <script src="../static/js/restaurant.js"></script>
+    </head>
+    <body onload="writeOrderDetail('{{ order_id }}')">
+        <a href="/orders">BACK</a>
+        <h1>Order Detail</h1>
+        <div id="order_info_div">
+            NO ORDER INFO
+        </div>
+        <div id="product_info_div">
+            NO PRODUCT INFO
+        </div>
+        <p id="total_price">NO TOTAL PRICE</p>
+        <a href="/order/{{ order_id }}/update">UPDATE RECORD</a><br>
+        <a href="javascript:void(0)" onClick="deleteOrder('{{ order_id }}')">DELETE RECORD</a>
+    </body>
+</html>

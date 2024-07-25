@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create Product</title>
+        <link rel="stylesheet" type="text/css" href="../static/css/restaurant.css">
+        <script src="../static/js/restaurant.js"></script>
+    </head>
+    <body>
+        <a href="/products">BACK</a>
+        <h1>Create Product</h1>
+        <form onsubmit="createProduct(event)" id="create_product_form">
+            <p>Product Name:</p>
+            <input type="text" name="product_name" required>
+            <p>Price:</p>
+            <input type="number" min="0" max="100" step=".01" name="price" required><br><br>
+            <input type="submit">
+        </form>
+    </body>
+</html>

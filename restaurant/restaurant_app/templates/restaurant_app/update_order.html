@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Update Order</title>
+        <link rel="stylesheet" type="text/css" href="../../static/css/restaurant.css">
+        <script src="../../static/js/restaurant.js"></script>
+    </head>
+    <body onload="writeUpdateForm('{{ order_id }}')">
+        <a href="/order/{{ order_id }}">BACK</a>
+        <h1>Update Order</h1>
+        <form onsubmit="updateOrder(event, '{{ order_id }}')" id="update_order_form">
+            <p>Order ID:</p>
+            <input type="number" min="1" max="20000" name="order_id" id="order_id" required>
+            <input type="hidden" name="hidden_order_id" id="hidden_order_id" required>
+            <p>Order Date:</p>
+            <input type="datetime" name="order_date" id="order_date" required><br><br>
+            <table id="product_table">
+                <tr>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th></th>
+                </tr>
+            </table>
+            <a href="javascript:void(0)" onClick="addRow()">Add Row</a><br><br>
+            <input type="submit">
+        </form>
+    </body>
+</html>
